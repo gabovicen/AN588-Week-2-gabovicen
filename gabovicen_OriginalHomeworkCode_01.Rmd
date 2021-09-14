@@ -1,0 +1,116 @@
+---
+title: "gabovicen_OriginalHomeworkCode_01"
+author: "Gabo"
+date: "9/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Original Homework Code
+
+
+
+```{r instructions}
+```
+
+First, create a vector of 1, word character strings comprising the first line of the novel Ulysses, by James Joyce: “Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”
+
+Then, extract every third element of this vector.
+
+## Challenge 1
+
+```{r}
+Vector_1<- c("Stately","plump", "Buck","Mulligan", "came", "from", "the", "stairhead", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed")
+Vector_2<-Vector_1[seq(1,22, by=3)]
+Vector_2
+```
+
+## Chalenge 2
+
+```{r}
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+```
+
+
+Given the matrix, m, extract the 2nd, 3rd, and 6th columns and assign them to the variable x.
+
+Given the matrix, m, above, extract the 6th to 8th row and assign them to the variable x.
+
+Given the matrix, m, above, extract the elements from row 2, column 2 to row 6, column 9 and assign them to the variable x.
+
+
+```{r}
+x<-m[,c(2,3,6)]
+x
+```
+```{r}
+x<-m[6:8]
+x
+```
+```{r}
+x<-m[2:6,2:9]
+x
+```
+
+## Chalenge 3
+
+Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1.
+
+```{r}
+a<-array(400:1, c(5,5,4,4))
+a
+```
+
+1) a[1, 1, 1, 2]
+
+```{r}
+a[1, 1, 1, 2]
+```
+
+2) a[2, 3, 2, ]
+
+```{r}
+a[2, 3, 2, ]
+```
+
+3) a[1:5, 1:5, 3, 3]
+
+```{r}
+a[1:5, 1:5, 3, 3]
+```
+
+## Chalenge 4
+
+Create a list representing this (simplified) primate taxonomy:
+
+```{r}
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+Catarrhini <-c("Cercopithecidae", "Hylobatidae", "Hominidae")
+Anthropoidea <- list(Platyrrhini, Catarrhini)
+names(Anthropoidea) <- list("Platyrrhini", "Catarrhini")
+Anthropoidea
+Tarsioidea <-c("Tarsiidae")
+Tarsioidea
+Haplorhini <- list(Anthropoidea, Tarsioidea)
+names(Haplorhini) <-list("Anthropoidea", "Tarsioidea")
+Haplorhini
+Primates <-list(Haplorhini, Strepsirhini)
+names(Primates) <-list("Haplorhini", "Strepsirhini")
+Primates
+```
+
+## Chalenge 5
+
+```{r}
+m3 <- matrix(data = c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
+m3
+df<- as.data.frame (m3, row.names = NULL, optional = FALSE)
+as.logical(df$V2)
+as.factor(df$V3)
+str(df)
+```
+
