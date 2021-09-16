@@ -92,7 +92,6 @@ Create a list representing this (simplified) primate taxonomy:
 
 ```{r}
 "Anthropoidea" <- c("Platyrrhini", "Catarrhini")
-names(Anthropoidea) <-list(Platyrrhini, Catarrhini )
 Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini <-c("Cercopithecidae", "Hylobatidae", "Hominidae")
 Anthropoidea <- list(Platyrrhini, Catarrhini)
