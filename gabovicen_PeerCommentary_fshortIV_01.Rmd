@@ -24,7 +24,7 @@ Then, extract every third element of this vector.
 ## Challenge 1
 
 ```{r}
-# Something went wrong when knitting in your markdown, and the results from the code do not show up in the html file. 
+# Something went wrong when knitting in your markdown, and the results from the code do not show up in the html file.
 
 Vector_1<- c("Stately","plump", "Buck","Mulligan", "came", "from", "the", "stairhead", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed")
 Vector_2<-Vector_1[seq(1,22, by=3)]
@@ -49,6 +49,7 @@ Given the matrix, m, above, extract the elements from row 2, column 2 to row 6, 
 
 
 ```{r}
+# It might be a good idea to put the instruction before each part you're doing. (IE: 2nd, 3rd, and 6th for the one bellow, etc.)
 x<-m[,c(2,3,6)]
 x
 ```
@@ -56,6 +57,7 @@ x
 x<-m[6:8]
 x
 ```
+
 ```{r}
 x<-m[2:6,2:9]
 x
@@ -103,17 +105,22 @@ Tarsioidea
 Haplorhini <- list(Anthropoidea, Tarsioidea)
 names(Haplorhini) <-list("Anthropoidea", "Tarsioidea")
 Haplorhini
+
 # Need to make Strepsirhini with Lemoroidea and Lorisoidea nested in it first.
+
 Primates <-list(Haplorhini, Strepsirhini)
+
 # Error since Strepsirhini is not yet an object created.
+
 names(Primates) <-list("Haplorhini", "Strepsirhini")
 Primates
 ```
 
 ## Challenge 5
-(Full instructions here)
+
 
 ```{r}
+# Instructions above?
 m3 <- matrix(data = c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
 m3
 df<- as.data.frame (m3, row.names = NULL, optional = FALSE)
